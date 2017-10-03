@@ -1,0 +1,39 @@
+{
+  "name": "atma-io-middleware-eslint",
+  "version": "1.1.20",
+  "description": "ESLint Middleware for Atma.IO",
+  "author": {
+    "name": "Alex Kit",
+    "url": "alex.kit@atmajs.com"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "app-bundler",
+    "watch": "app-bundler --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^3.19.0",
+    "atma-io-middleware-base": "^1.0.0"
+  },
+  "devDependencies": {
+    "app-bundler": "0.0.33"
+  },
+  "app-bundler": {
+    "file": "src/index.js",
+    "outputMain": "lib/index.js",
+    "package": {
+      "module": "commonjs",
+      "commonjs": {
+        "output": "simplified"
+      }
+    },
+    "dynamicDependencies": [
+      "eslint",
+      "atma-io-middleware-base"
+    ],
+    "middlewares": {
+      "js": []
+    }
+  }
+}

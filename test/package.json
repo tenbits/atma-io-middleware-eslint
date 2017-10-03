@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+  	"atma": ">0.0.0"
+  },
+  "scripts": {
+      "test": "atma test --config config.js"
+  },
+  
+  "atma": {
+  	"plugins": [
+  		".."
+  	]
+  }
+}

@@ -1,0 +1,11 @@
+require('..');
+
+var FILE = '/test/foo.js';
+UTest({
+	
+	'io.File.read' () {
+		
+		var content = io.File.read(FILE);
+		console.log(content);
+	}	
+});
